@@ -51,8 +51,12 @@
         form: '#form-1',
         errorSelector: '.form-message',
         rules: [
-          Validator.isRequired('#fullname'),
+          Validator.isRequired('#fullname', 'Bạn vui lòng nhập trường này'),
           Validator.isEmail('#email'),
+          Validator.minLenght('#password', 6),
+          Validator.isConfirmPassword('#password_confirmation', function(){
+            return document.querySelector('#form-1 #password').value;
+          }, 'Mật khẩu nhập lại không chính xác'),
         ]
       });
     </script>
