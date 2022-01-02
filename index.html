@@ -28,21 +28,19 @@
             <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
             <span class="form-message"></span>
           </div>
-          
-            <p>tooi dadxajdashdjkhasjkdhas</p>
           <div class="form-group">
             <label for="password" class="form-label">Mật khẩu</label>
             <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
             <span class="form-message"></span>
           </div>
-            <h1>asdjasdhjkashdjkashdkjhasjkdhajksdhkjasdhfafugsfuygafgasd</h1>
+
           <div class="form-group">
             <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
             <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
             <span class="form-message"></span>
           </div>
       
-          <button class="form-submit">Đăng ký</button>
+          <button class="form-submit">Đăng ký ngay</button>
         </form>
       
       </div>
@@ -51,6 +49,7 @@
       //mong muốn của chúng ta
       Validator({
         form: '#form-1',
+        errorSelector: '.form-message',
         rules: [
           Validator.isRequired('#fullname'),
           Validator.isEmail('#email'),
